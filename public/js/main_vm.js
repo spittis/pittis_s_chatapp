@@ -12,7 +12,10 @@ function logConnect({sID, message}){
 
 function appendMessage(message){
     vm.messages.push(message);
+    var byeUser = new Object();
+        socket.emit('disconnect message', { content: "A user has exited the chat", object: byeUser});
 }
+
 
 //create vue instance
 const vm = new Vue ({

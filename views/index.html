@@ -9,12 +9,12 @@
 <body>
 	<main id="app">		
 		<section class="form-container">
-			<label for="nickname">Your Nickname (optional)</label>
+			<label for="nickname">Name:</label>
 			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
 			
 			<form>
-				<label for="message">Something to say?</label>
-				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
+				<label for="message">Message:</label>
+				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea" placeholder="Enter your message here..."></textarea>
 				<input type="submit" @click.prevent="dispatchMessage">
 			</form>
 		</section>

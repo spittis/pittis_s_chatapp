@@ -3,16 +3,22 @@
 
     width: 45%;
     padding: 8px 12px;
-    background-color: white; 
+    background-color: rgb(255, 255, 255); 
     border-radius: 8px;
     margin-bottom: 1rem;
-
+    color: black;
     float:left;
     clear: both;
+    -webkit-box-shadow: 0 10px 6px -6px rgb(0, 0, 0);
+    -moz-box-shadow: 0 10px 6px -6px rgb(0, 0, 0);
+         box-shadow: 0 10px 6px -6px rgb(0, 0, 0);
 }
 
 .my-message {
     float: right !important;
-    background-color: #86bf9d;
+    background-color: #7fbe9b;
     color: white;
+    -webkit-box-shadow: -10 10px 6px -6px rgb(0, 0, 0);
+       -moz-box-shadow: -10 10px 6px -6px rgb(0, 0, 0);
+            box-shadow: -10 10px 6px -6px rgb(0, 0, 0);
 }
