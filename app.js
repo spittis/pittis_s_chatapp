@@ -23,6 +23,14 @@ io.on('connection', function(socket){
 
     socket.emit('connected', { sID: `${socket.id}`, message: "new connection"});
 
+    
+//connect message 
+    socket.on('connect message', function(msg) {
+        //send the message to everyone connected to the app when someone connects
+        io.emit('connect message', {id: `${socket.id}`, message: msg});
+    })
+    
+//chat message
     socket.on('chat message', function(msg) {
         console.log('message: ', msg, 'socket:', socket.id);
 

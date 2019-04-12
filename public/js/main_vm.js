@@ -2,12 +2,12 @@ import ChatMessage from './modules/ChatMessage.js';
 
 const socket = io();
 
-function logConnect({sID, message}){ //sID, message
+function logConnect({sID, message}){ 
     console.log(sID, message);
     vm.socketID = sID;
 
     var newUser = new Object();
-        socket.emit('chat message', { content: "A new user has entered the chat", object: newUser});
+        socket.emit('connect message', { content: "A new user has entered the chat", object: newUser});
 }
 
 function appendMessage(message){
@@ -40,4 +40,5 @@ const vm = new Vue ({
 
 socket.on('connected', logConnect);
 socket.addEventListener('chat message', appendMessage);
+socket.addEventListener('connect message', appendMessage);
 socket.addEventListener('disconnect', appendMessage);
