@@ -17,6 +17,9 @@
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea" placeholder="Enter your message here..."></textarea>
 				<input type="submit" @click.prevent="dispatchMessage">
 			</form>
+
+			<a href="#" class="modeChange"><i onclick="addLightMode()"><p>Day Mode</p></i></a>
+			<a href="#" class="modeChange"><i onclick="removeLightMode()"><p>Night Mode</p></i></a>
 		</section>
 		
 		<section class="messages">
@@ -28,5 +31,6 @@
 	</main>
 	<script src="/socket.io/socket.io.js"></script>
 	<script type="module" src="js/main_vm.js"></script>
+	<script src="js/modules/lightmode.js"></script>
 </body>
 </html>
