@@ -12,8 +12,8 @@ function logConnect({sID, message}){
 
 function appendMessage(message){
     vm.messages.push(message);
-    var byeUser = new Object();
-        socket.emit('disconnect message', { content: "A user has exited the chat", object: byeUser});
+   // var byeUser = new Object();
+        //socket.emit('disconnect message', { content: "A user has exited the chat", object: byeUser});
 }
 
 
@@ -23,13 +23,14 @@ const vm = new Vue ({
         socketID: "",
         nickname: "",
         message: "",
-        messages: []
+        messages: [],
+
     },
 
     methods: {
         dispatchMessage(){
             //emit message event from the client side
-            socket.emit('chat message', {content: this.message, name: this.nickname || "Anonymous"});
+            socket.emit('chat message', {content: this.message, name: this.nickname || "Anonymous:"});
 
             //reset the message
             this.message = "";
@@ -45,3 +46,4 @@ socket.on('connected', logConnect);
 socket.addEventListener('chat message', appendMessage);
 socket.addEventListener('connect message', appendMessage);
 socket.addEventListener('disconnect', appendMessage);
+

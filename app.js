@@ -29,6 +29,8 @@ io.on('connection', function(socket){
         //send the message to everyone connected to the app when someone connects
         io.emit('connect message', {id: `${socket.id}`, message: msg});
     })
+
+
     
 //chat message
     socket.on('chat message', function(msg) {
@@ -41,5 +43,6 @@ io.on('connection', function(socket){
     socket.on('disconnect', function(msg){
         console.log('a user has disconnected');
         io.emit('disconnect message', {id: `${socket.id}`, message: msg});
+      
     });
 })
