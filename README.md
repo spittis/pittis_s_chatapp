@@ -13,6 +13,7 @@ Users can begin by downloading a zip file of this project, navigating to the roo
 * [Express] - A web application framework
 * [SASS] - CSS extension
 * [Animate.css] - CSS animations for animated messages
+* [Vue.js] - The JS framework for single-page applications
 
 
 ## Authors
