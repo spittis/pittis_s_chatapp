@@ -26,6 +26,11 @@
   box-shadow: -10 10px 6px -6px black;
 }
 
+.new-message span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 @-webkit-keyframes bounce {
   from, 20%, 53%, 80%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
